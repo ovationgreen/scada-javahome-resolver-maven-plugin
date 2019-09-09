@@ -1,6 +1,8 @@
 # javahome-resolver-maven-plugin
 **Performs the lookup of the path to the used jdk and exports it as maven property**
 
+**NOTE: DiamondQ Fork was to deploy the plugin to the main Maven repository.
+
 If you have a need to develop and maintain a system and your maintenance and development branches diverge in used JDK, you could use [Maven Toolchains Plugin](https://maven.apache.org/plugins/maven-toolchains-plugin/).
 But what if some of your tests require the path to the JDK used to build the system, e.g. to start an application server which can't be started with a newer
 JDK, then this plugin may be for you.
@@ -46,8 +48,9 @@ Here is an example:
 			</configuration>
 		</plugin>
 		<plugin>
-			<groupId>eu.drus.maven.plugins</groupId>
+			<groupId>com.diamondq.maven</groupId>
 			<artifactId>javahome-resolver-maven-plugin</artifactId>
+			<version>1.0.2</version>
 			<executions>
 				<execution>
 					<goals>
