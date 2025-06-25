@@ -35,7 +35,7 @@ public class JavaHomeResolverMojo extends AbstractMojo {
         DefaultJavaToolChain javaToolchain = null;
         if (toolchainManager != null) {
             final Toolchain tc = toolchainManager.getToolchainFromBuildContext("jdk", session);
-            if (tc.getClass().equals(DefaultJavaToolChain.class)) {
+            if (tc != null && tc.getClass().equals(DefaultJavaToolChain.class)) {
                 // can this ever NOT happen?
                 javaToolchain = (DefaultJavaToolChain) tc;
             }
